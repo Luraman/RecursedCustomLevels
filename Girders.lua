@@ -28,7 +28,7 @@ function start(wet)
   Spawn("chest", 12, 5.5, "girders")
   Global("box", 15, 5.5)
   Spawn("key", 15.5, 4.5)
-  Spawn("lock", 6.5, 8.5)
+  Spawn("lock", 5.5, 8.5)
   Spawn("crystal", 3.5, 8.5)
 end
 
