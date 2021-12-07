@@ -6,6 +6,13 @@ local gear = { ["-"] = "pipeh", ["|"] = "pipev",
                ["@"] = "clockwise", ["?"] = "widdershins",
                ["="] = "girder", o = "box", ["~"] = "ledge" }
 
+local paradox = { o = "glitch", x = "glitchhole", ["\""] = "glitchledge" }
+
+local crazy = { o = "black", ["-"] = "black_ledge",
+                z = "glitch_tunnel", ["#"] = "glitch_check", ["?"] = "glitch_ugly",
+                ["1"] = "glitch_static1", ["2"] = "glitch_static2", ["3"] = "glitch_static3",
+                ["4"] = "glitch_static4", ["5"] = "glitch_static5" }
+
 function start(wet)
   ApplyTiles(gear, 0, 0, [[
 ......|...........|.
@@ -34,26 +41,72 @@ end
 
 function girders(wet)
 ApplyTiles(gear, 0, 0, [[
-.....46....|........
-.....46.............
-.....46.............
-.....46.............
-.....46~~~~|........
-.....46....|........
-.....46....|}---o...
-.....13~...><.......
+....46....|........|
+....46.............|
+....46.............|
+....46.............|
+....46~~~~|........|
+....46....|........|
+....46....|}---o...|
+....13~...><.......>
 ....................
-...................~
-..79....79....79....
-..46....46....46....
-..46....46....46....
---46----46----46----
-..46....46....46....
+..................~~
+.79....79....79.....
+.46....46....46.....
+.46....46....46.....
+-46----46----46-----
+.46....46....46.....
 ]])
-  Spawn("player", 13, 5)
-  Spawn("yield", 14.5, 5)
-  Spawn("lock", 11.5, 2.5)
-  Global("key", 1, 12.5)
+  Spawn("player", 12, 5)
+  Spawn("yield", 13.5, 5)
+  Spawn("lock", 10.5, 2.5)
+  Global("generic", 0.5, 12.5)
+end
+
+function reject(wet)
+ApplyTiles(paradox, 0, 0, [[
+oooooooooooooooooooo
+oooooooooooooooooooo
+oooooooooo........oo
+oooooooooo........oo
+oooooooooo........oo
+ooooooooooooooo...oo
+oo................oo
+oo................oo
+oo................oo
+oooooooooooooooooooo
+oooooooooooooooooooo
+oooooooooooooooooooo
+oooooooooooooooooooo
+oooooooooooooooooooo
+oooooooooooooooooooo
+]])
+  Spawn("player", 4.5, 8)
+  Spawn("key", 8.5, 8.5)
+  Spawn("lock", 12.5, 7.5)
+  Spawn("lock", 14.5, 7.5)
+  Spawn("diamond", 12.5, 3.5)
+end
+
+function glitch(wet)
+ApplyTiles(paradox, 0, 0, [[
+oooooooooooooooooooo
+oooooooooooooooooooo
+oooooooooooooooooooo
+oooooooooooooooooooo
+oooooooooooooooooooo
+ooooo..........ooooo
+ooooo..........ooooo
+ooooo..........ooooo
+ooooo..........ooooo
+ooooo..........ooooo
+oooooooooooooooooooo
+oooooooooooooooooooo
+oooooooooooooooooooo
+oooooooooooooooooooo
+oooooooooooooooooooo
+]])
+  Spawn("player", 10, 9)
 end
 
 tiles = "tiles/clockwork"
