@@ -30,7 +30,7 @@ function start(wet)
 ]])
   Spawn("player", 8, 5)
   Spawn("chest", 12, 5.5, "girders")
-  Spawn("cauldron", 15.5, -4, "threadless")
+  Spawn("record", 15.5, -4, "sounds/voices/t6")
   Global("box", 15, 5.5)
   Spawn("key", 15.5, 4.5)
   Spawn("lock", 5.5, 8.5)
@@ -93,48 +93,26 @@ end
 
 function glitch(wet)
 ApplyTiles(paradox, 0, 0, [[
-o...oo.o.oo...oo.o.o
-o.o.oo.o.oo.o.oo.o.o
-o..ooo.o.oo..ooo...o
-o.o.oo.o.oo.o.ooo.oo
-o.o.oo...oo...ooo.oo
+oooooooooooooooooooo
+oooooooooooooooooooo
+oooooooooooooooooooo
+oooooooooooooooooooo
+oooooooooooooooooooo
 oooooooooooooooooooo
 ....................
 ....................
 ....................
 oooooooooooooooooooo
-...o...o....o.o.o...
-.o.o.o.o.oo.o.o.o.oo
-...o..oo.oo.o.o.o...
-.o.o.o.o.oo.o.o.o.oo
-.o.o...o....oo.oo...
+oooooooooooooooooooo
+oooooooooooooooooooo
+oooooooooooooooooooo
+oooooooooooooooooooo
+oooooooooooooooooooo
 ]])
   Spawn("player", 10, 8)
 end
 
-function threadless(wet)
-ApplyTiles(cloud, 0, 0, [[
-oooooooooooooooooooo
-oooooooooooooooooooo
-oooooooooooooooooooo
-oooooooooooooooooooo
-oooooooooooooooooooo
-oooooooooooooooooooo
-....................
-....................
-....................
-oooooooooooooooooooo
-oooooooooooooooooooo
-oooooooooooooooooooo
-oooooooooooooooooooo
-oooooooooooooooooooo
-oooooooooooooooooooo
-]])
-  Spawn("player", 2, 8)
-  Spawn("ruby", 10, 7.5)
-end
-
 tiles = "tiles/clockwork"
 pattern = "backgrounds/library"
-dark = {start = {0.04, 0.03, 0.31}, threadless = {1, 1, 1}}
-light = {start = {0.11, 0.26, 0.64}, threadless = {1, 1, 1}}
+dark = {start = {0.04, 0.03, 0.31}}
+light = {start = {0.11, 0.26, 0.64}}
