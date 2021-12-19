@@ -8,8 +8,6 @@ local gear = { ["-"] = "pipeh", ["|"] = "pipev",
 
 local paradox = { o = "glitch", x = "glitchhole", ["~"] = "glitchledge" }
 
-local cloud = { ["{"] = "cloud_l", o = "cloud", ["}"] = "cloud_r", ["\""] = "cloudledge" }
-
 function start(wet)
   ApplyTiles(gear, 0, 0, [[
 ......}-------<.>-{.
